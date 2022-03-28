@@ -8,7 +8,7 @@ import com.yuanyang.mylibrary.parser.PropertyParserFactory;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-public class ViewHelper {
+public class PropertiesHelper {
 
     public static void applyProperties(View view, JSONArray properties) throws Exception {
         ViewGroup.LayoutParams params = view.getLayoutParams();

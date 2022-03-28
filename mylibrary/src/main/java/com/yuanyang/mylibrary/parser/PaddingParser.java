@@ -6,7 +6,6 @@ import com.yuanyang.mylibrary.Utils;
 
 public class PaddingParser implements Parser {
 
-
     @Override
     public void parse(View v, String property, String value, String type) throws Exception {
         int padding = (int) Utils.convertDimenToPixel(v.getContext(), value);

@@ -1,7 +1,6 @@
 package com.yuanyang.mylibrary;
 
 import android.app.Activity;
-import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -31,7 +30,7 @@ public class Json2View {
         String widgetStr = jsonObject.optString(Constants.WIDGET_NAME);
         View view = ViewFactory.getView(getAttachedActivity(), widgetStr);
         JSONArray properties = jsonObject.optJSONArray(Constants.PROPERTIES_NAME);
-        ViewHelper.applyProperties(view, properties);
+        PropertiesHelper.applyProperties(view, properties);
         JSONArray children = jsonObject.optJSONArray(Constants.CHILDREN_NAME);
         if (children != null) {
             ViewGroup parent = (ViewGroup) view;

@@ -1,29 +1,30 @@
 package com.yuanyang.mylibrary.parser;
 
-import android.view.ViewParent;
-
 import java.util.HashMap;
 
 public class PropertyParserFactory {
 
-    private static HashMap<String, Parser> cachedParser = new HashMap<>();
+    private static final String KEY_PADDING = "padding";
+    private static final String KEY_MARGIN = "margin";
+
+    private static final HashMap<String, Parser> CACHED_PARSER = new HashMap<>();
 
     public static Parser getPropertyParser(String property) {
         String key = getParserKey(property);
-        if (cachedParser.containsKey(key)) {
-            return cachedParser.get(key);
+        if (CACHED_PARSER.containsKey(key)) {
+            return CACHED_PARSER.get(key);
         } else {
             Parser propertyParser = getPropertyParserInner(key);
-            cachedParser.put(key, propertyParser);
+            CACHED_PARSER.put(key, propertyParser);
             return propertyParser;
         }
     }
 
     private static Parser getPropertyParserInner(String key) {
         switch (key) {
-            case "padding":
+            case KEY_PADDING:
                 return new PaddingParser();
-            case "margin":
+            case KEY_MARGIN:
                 return new MarginParser();
             case Parser.LAYOUT_WIDTH:
             case Parser.LAYOUT_HEIGHT:
@@ -57,10 +58,10 @@ public class PropertyParserFactory {
     }
 
     private static String getParserKey(String property) {
-        if (property.startsWith("padding")) {
-            return "padding";
-        } else if (property.startsWith("margin")) {
-            return "margin";
+        if (property.startsWith(KEY_PADDING)) {
+            return KEY_PADDING;
+        } else if (property.startsWith(KEY_MARGIN)) {
+            return KEY_MARGIN;
         } else {
             return property;
         }
