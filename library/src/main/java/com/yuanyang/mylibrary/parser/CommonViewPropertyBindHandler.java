@@ -6,12 +6,12 @@ import com.yuanyang.mylibrary.Constants;
 import com.yuanyang.mylibrary.ResourceLoader;
 import com.yuanyang.mylibrary.Utils;
 
-public class CommonViewParser implements Parser {
+public class CommonViewPropertyBindHandler implements PropertyBindHandler {
 
 
     @Override
     public void parse(View v, String property, String value, String type) throws Exception {
-        if (property.equals(Parser.BACKGROUND)) {
+        if (property.equals(PropertyBindHandler.BACKGROUND)) {
             applyBackground(v, property, value, type);
         }
     }

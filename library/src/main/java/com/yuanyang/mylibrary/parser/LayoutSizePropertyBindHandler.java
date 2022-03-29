@@ -5,7 +5,7 @@ import android.view.ViewGroup;
 
 import com.yuanyang.mylibrary.Utils;
 
-public class LayoutSizeParser implements Parser {
+public class LayoutSizePropertyBindHandler implements PropertyBindHandler {
 
     private static final String LAYOUT_MATCH_PARENT = "match_parent";
     private static final String LAYOUT_WRAP_CONTENT = "wrap_content";
@@ -13,7 +13,7 @@ public class LayoutSizeParser implements Parser {
     @Override
     public void parse(View v, String property, String value, String type) throws Exception {
         ViewGroup.LayoutParams p = v.getLayoutParams();
-        if (property.equals(Parser.LAYOUT_WIDTH)) {
+        if (property.equals(PropertyBindHandler.LAYOUT_WIDTH)) {
             if (value.equals(LAYOUT_MATCH_PARENT)) {
                 p.width = ViewGroup.LayoutParams.MATCH_PARENT;
             } else if (value.equals(LAYOUT_WRAP_CONTENT)) {
@@ -21,7 +21,7 @@ public class LayoutSizeParser implements Parser {
             } else {
                 p.width = (int) Utils.convertDimenToPixel(v.getContext(), value);
             }
-        } else if (property.equals(Parser.LAYOUT_HEIGHT)) {
+        } else if (property.equals(PropertyBindHandler.LAYOUT_HEIGHT)) {
             if (value.equals(LAYOUT_MATCH_PARENT)) {
                 p.height = ViewGroup.LayoutParams.MATCH_PARENT;
             } else if (value.equals(LAYOUT_WRAP_CONTENT)) {

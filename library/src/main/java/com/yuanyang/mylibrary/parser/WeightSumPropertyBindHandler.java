@@ -5,7 +5,7 @@ import android.widget.LinearLayout;
 
 import com.yuanyang.mylibrary.Utils;
 
-public class WeightSumParser implements Parser {
+public class WeightSumPropertyBindHandler implements PropertyBindHandler {
     @Override
     public void parse(View v, String property, String value, String type) throws Exception {
         if (v instanceof LinearLayout) {

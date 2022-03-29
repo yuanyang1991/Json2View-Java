@@ -4,7 +4,7 @@ import android.view.View;
 
 import com.yuanyang.mylibrary.Utils;
 
-public class IDParser implements Parser {
+public class IDPropertyBindHandler implements PropertyBindHandler {
 
     @Override
     public void parse(View v, String property, String value, String type) throws Exception {

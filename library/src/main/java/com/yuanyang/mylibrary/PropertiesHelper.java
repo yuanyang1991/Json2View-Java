@@ -3,7 +3,7 @@ package com.yuanyang.mylibrary;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.yuanyang.mylibrary.parser.PropertyParserFactory;
+import com.yuanyang.mylibrary.parser.BindHandlerFactory;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -22,7 +22,7 @@ public class PropertiesHelper {
             String property = jsonObject.optString(Constants.PROPERTY_NAME);
             String value = jsonObject.optString(Constants.PROPERTY_VALUE);
             String type = jsonObject.optString(Constants.PROPERTY_TYPE);
-            PropertyParserFactory.getPropertyParser(property).parse(view, property, value, type);
+            BindHandlerFactory.getPropertyParser(property).parse(view, property, value, type);
         }
     }
 

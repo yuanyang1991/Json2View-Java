@@ -2,7 +2,7 @@ package com.yuanyang.mylibrary.parser;
 
 import android.view.View;
 
-public interface Parser {
+public interface PropertyBindHandler {
 
     String ID = "id";
 

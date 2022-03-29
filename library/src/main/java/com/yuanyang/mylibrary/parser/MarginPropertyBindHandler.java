@@ -5,7 +5,7 @@ import android.view.ViewGroup;
 
 import com.yuanyang.mylibrary.Utils;
 
-public class MarginParser implements Parser {
+public class MarginPropertyBindHandler implements PropertyBindHandler {
 
     @Override
     public void parse(View v, String property, String value, String type) throws Exception {
@@ -18,15 +18,15 @@ public class MarginParser implements Parser {
             int marginTop = marginLayoutParams.topMargin;
             int marginBottom = marginLayoutParams.bottomMargin;
 
-            if (property.equals(Parser.MARGIN)) {
+            if (property.equals(PropertyBindHandler.MARGIN)) {
                 marginStart = marginEnd = marginTop = marginBottom = margin;
-            } else if (property.equals(Parser.MARGIN_START)) {
+            } else if (property.equals(PropertyBindHandler.MARGIN_START)) {
                 marginStart = margin;
-            } else if (property.equals(Parser.MARGIN_END)) {
+            } else if (property.equals(PropertyBindHandler.MARGIN_END)) {
                 marginEnd = margin;
-            } else if (property.equals(Parser.MARGIN_TOP)) {
+            } else if (property.equals(PropertyBindHandler.MARGIN_TOP)) {
                 marginTop = margin;
-            } else if (property.equals(Parser.MARGIN_BOTTOM)) {
+            } else if (property.equals(PropertyBindHandler.MARGIN_BOTTOM)) {
                 marginBottom = margin;
             }
 

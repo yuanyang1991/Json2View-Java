@@ -7,7 +7,7 @@ import com.yuanyang.mylibrary.Constants;
 import com.yuanyang.mylibrary.ResourceLoader;
 import com.yuanyang.mylibrary.Utils;
 
-public class TextViewParser implements Parser {
+public class TextViewPropertyBindHandler implements PropertyBindHandler {
 
 
     @Override
@@ -15,25 +15,25 @@ public class TextViewParser implements Parser {
         if (v instanceof TextView) {
             TextView textView = (TextView) v;
             switch (property) {
-                case Parser.TEXT_SIZE:
+                case PropertyBindHandler.TEXT_SIZE:
                     textView.setTextSize(Utils.convertDimenToPixel(v.getContext(), value));
                     break;
-                case Parser.FONT_FAMILY:
+                case PropertyBindHandler.FONT_FAMILY:
 
                     break;
-                case Parser.TEXT:
+                case PropertyBindHandler.TEXT:
                     applyText(value, type, textView);
                     break;
-                case Parser.TEXT_COLOR:
+                case PropertyBindHandler.TEXT_COLOR:
                     applyTextColor(value, type, textView);
                     break;
-                case Parser.TEXT_STYLE:
+                case PropertyBindHandler.TEXT_STYLE:
                     textView.setTypeface(null, Utils.string2Int(value));
                     break;
-                case Parser.LINES:
+                case PropertyBindHandler.LINES:
                     textView.setLines(Utils.string2Int(value));
                     break;
-                case Parser.SINGLE_LINE:
+                case PropertyBindHandler.SINGLE_LINE:
                     textView.setSingleLine(Utils.string2Boolean(value));
                     break;
             }

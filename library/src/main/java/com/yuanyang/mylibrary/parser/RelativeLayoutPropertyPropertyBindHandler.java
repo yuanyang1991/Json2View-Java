@@ -2,7 +2,7 @@ package com.yuanyang.mylibrary.parser;
 
 import android.view.View;
 
-public class RelativeLayoutPropertyParser implements Parser {
+public class RelativeLayoutPropertyPropertyBindHandler implements PropertyBindHandler {
 
     @Override
     public void parse(View v, String property, String value, String type) throws Exception {

@@ -3,7 +3,7 @@ package com.yuanyang.mylibrary.parser;
 import android.view.View;
 import android.widget.LinearLayout;
 
-public class OrientationParser implements Parser {
+public class OrientationPropertyBindHandler implements PropertyBindHandler {
 
     private static final String HORIZONTAL = "horizontal";
     private static final String VERTICAL = "vertical";

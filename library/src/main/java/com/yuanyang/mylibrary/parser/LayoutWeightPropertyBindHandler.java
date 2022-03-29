@@ -6,7 +6,7 @@ import android.widget.LinearLayout;
 
 import com.yuanyang.mylibrary.Utils;
 
-public class LayoutWeightParser implements Parser {
+public class LayoutWeightPropertyBindHandler implements PropertyBindHandler {
     @Override
     public void parse(View v, String property, String value, String type) throws Exception {
         ViewGroup.LayoutParams p = v.getLayoutParams();
