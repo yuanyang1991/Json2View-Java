@@ -22,9 +22,7 @@ public class ImageViewPropertyBindHandler implements PropertyBindHandler {
                     imageView.setImageResource(ResourceLoader.getDrawableId(imageView.getContext(), value));
                 }
             } else if (property.equals(PropertyItem.SCALE_TYPE)) {
-                if (type.equals(PropertyType.TYPE_STRING)) {
-                    imageView.setScaleType(ImageView.ScaleType.valueOf(value));
-                }
+                imageView.setScaleType(ImageView.ScaleType.valueOf(value.toUpperCase()));
             }
         }
     }

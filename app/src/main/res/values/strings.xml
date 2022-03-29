@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Json2View-Java</string>
+    <string name="vas_welcome_to_try_premium">欢迎体验试用会员</string>
+    <string name="premium_sign_in_unlock_privilege">登录并解锁20多项仅在WPS Premium中可用的独家福利</string>
+    <string name="pdf_paypage_btn_freetrial_txt">开始免费试用</string>
+    <string name="pdf_paypage_btn_upgrade_txt">升级为会员111</string>
+    <string name="pdf_paypage_btn_upgrade_txt1">升级为会员2222</string>
 </resources>

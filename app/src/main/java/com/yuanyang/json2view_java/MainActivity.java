@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.yuanyang.mylibrary.Json2View;
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
             setContentView(rootView);
         } else {
             TextView textView = new TextView(this);
+            textView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
             textView.setText("Error");
             textView.setTextSize(50, TypedValue.COMPLEX_UNIT_SP);
             textView.setGravity(Gravity.CENTER);

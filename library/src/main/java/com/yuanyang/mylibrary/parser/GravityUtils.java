@@ -5,7 +5,7 @@ import android.view.Gravity;
 public class GravityUtils {
 
     public static int gravityStringToInt(String gravity) {
-        switch (gravity) {
+        switch (gravity.toUpperCase()) {
             case "TOP":
                 return Gravity.TOP;
             case "BOTTOM":

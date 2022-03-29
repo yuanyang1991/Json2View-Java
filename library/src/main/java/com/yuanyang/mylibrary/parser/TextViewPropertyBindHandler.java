@@ -1,5 +1,6 @@
 package com.yuanyang.mylibrary.parser;
 
+import android.graphics.Typeface;
 import android.util.TypedValue;
 import android.view.View;
 import android.widget.TextView;
@@ -35,7 +36,7 @@ public class TextViewPropertyBindHandler implements PropertyBindHandler {
                     applyTextColor(value, type, textView);
                     break;
                 case PropertyItem.TEXT_STYLE:
-                    textView.setTypeface(null, Utils.string2Int(value));
+                    textView.setTypeface(null, parseTextStyle(value));
                     break;
                 case PropertyItem.LINES:
                     textView.setLines(Utils.string2Int(value));
@@ -47,13 +48,29 @@ public class TextViewPropertyBindHandler implements PropertyBindHandler {
         }
     }
 
+    private int parseTextStyle(String value) {
+        switch (value) {
+            case "italic":
+                return Typeface.ITALIC;
+            case "bold_italic":
+                return Typeface.BOLD_ITALIC;
+            case "bold":
+                return Typeface.BOLD;
+            default:
+                return Typeface.NORMAL;
+
+
+        }
+    }
+
     private void applyTextColor(String value, String type, TextView textView) throws Exception {
         switch (type) {
             case PropertyType.TYPE_COLOR:
                 textView.setTextColor(Utils.string2Color(value));
                 break;
             case PropertyType.TYPE_COLOR_REF:
-                textView.setTextColor(ResourceLoader.getColorId(textView.getContext(), value));
+                int colorId = ResourceLoader.getColorId(textView.getContext(), value);
+                textView.setTextColor(textView.getContext().getResources().getColor(colorId));
         }
 
     }

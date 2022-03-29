@@ -7,7 +7,7 @@ import java.util.HashMap;
 public class BindHandlerFactory {
 
     public static final String KEY_PADDING = "padding";
-    public static final String KEY_MARGIN = "margin";
+    public static final String KEY_MARGIN = "layout_margin";
     public static final String KEY_SIZE = "KEY_SIZE";
     public static final String KEY_LAYOUT_WEIGHT = "KEY_LAYOUT_WEIGHT";
     public static final String KEY_WEIGHT_SUM = "KEY_WEIGHT_SUM";

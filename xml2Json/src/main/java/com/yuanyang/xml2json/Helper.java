@@ -27,6 +27,9 @@ public class Helper {
                 if (value.startsWith("@color")) {
                     type = PropertyType.TYPE_COLOR_REF;
                     value = getRefValue(propertyValue);
+                } else if (value.startsWith("@drawable")) {
+                    type = PropertyType.TYPE_DRAWABLE_REF;
+                    value = getRefValue(propertyValue);
                 } else {
                     type = PropertyType.TYPE_COLOR;
                 }
