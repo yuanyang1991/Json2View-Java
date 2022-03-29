@@ -36,7 +36,7 @@ public class LayoutXmlParser extends DefaultHandler {
 
     @Override
     public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
-        List<Node.Property> propertyList = parseProperty(attributes);
+        List<Property> propertyList = parseProperty(attributes);
         Node temp = new Node(localName, propertyList);
         if (stack.size() == 0) {
             root = temp;
@@ -47,15 +47,15 @@ public class LayoutXmlParser extends DefaultHandler {
         stack.push(temp);
     }
 
-    private List<Node.Property> parseProperty(Attributes attributes) {
+    private List<Property> parseProperty(Attributes attributes) {
         int len = attributes.getLength();
-        List<Node.Property> result = new ArrayList<>();
+        List<Property> result = new ArrayList<>();
         String key = null;
         String value = null;
         for (int i = 0; i < len; i++) {
-            key = attributes.getQName(i);
+            key = attributes.getLocalName(i);
             value = attributes.getValue(i);
-            result.add(new Node.Property(key, value));
+            result.add(PropertyHelper.createPropertyItem(key, value));
         }
         return result;
     }

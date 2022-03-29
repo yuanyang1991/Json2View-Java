@@ -6,9 +6,9 @@ public class MyClass {
 
     public static void main(String[] args) {
         File xmlFile = new File("D:\\demo\\Json2ViewJava\\app\\src\\main\\res\\layout\\activity_main.xml");
-        File jsonFile = null;
+        File jsonFile = new File("D:\\demo\\Json2ViewJava\\layout_main.json");
         try {
-            Node node = new LayoutXmlParser(xmlFile).parse();
+            new Xml2Json(xmlFile, jsonFile).startConvert();
         } catch (Exception e) {
             e.printStackTrace();
         }

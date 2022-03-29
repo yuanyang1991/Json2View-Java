@@ -44,14 +44,4 @@ public class Node {
         }
         children.add(node);
     }
-
-    public static class Property {
-        private String key;
-        private String value;
-
-        public Property(String key, String value) {
-            this.key = key;
-            this.value = value;
-        }
-    }
 }
