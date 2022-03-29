@@ -2,6 +2,8 @@ package com.yuanyang.mylibrary.parser;
 
 import android.view.View;
 
+import com.yuanyang.mylibrary.Property;
+
 public interface PropertyBindHandler {
 
     String ID = "id";
@@ -55,7 +57,7 @@ public interface PropertyBindHandler {
 
     String VISIBILITY = "visibility";
 
-    void parse(View v, String property, String value, String type) throws Exception;
+    void parse(View v, Property p) throws Exception;
 
 
 }

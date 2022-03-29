@@ -4,8 +4,8 @@ import java.util.HashMap;
 
 public class BindHandlerFactory {
 
-    private static final String KEY_PADDING = "padding";
-    private static final String KEY_MARGIN = "margin";
+    public static final String KEY_PADDING = "padding";
+    public static final String KEY_MARGIN = "margin";
 
     private static final HashMap<String, PropertyBindHandler> CACHED_PARSER = new HashMap<>();
 
@@ -22,10 +22,6 @@ public class BindHandlerFactory {
 
     private static PropertyBindHandler getPropertyParserInner(String key) {
         switch (key) {
-            case KEY_PADDING:
-                return new PaddingPropertyBindHandler();
-            case KEY_MARGIN:
-                return new MarginPropertyBindHandler();
             case PropertyBindHandler.LAYOUT_WIDTH:
             case PropertyBindHandler.LAYOUT_HEIGHT:
                 return new LayoutSizePropertyBindHandler();
@@ -51,6 +47,9 @@ public class BindHandlerFactory {
             case PropertyBindHandler.SCALE_TYPE:
                 return new ImageViewPropertyBindHandler();
             case PropertyBindHandler.BACKGROUND:
+            case PropertyBindHandler.ID:
+            case KEY_PADDING:
+            case KEY_MARGIN:
                 return new CommonViewPropertyBindHandler();
             default:
                 return new EmptyPropertyBindHandler();
