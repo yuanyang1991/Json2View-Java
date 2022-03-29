@@ -13,7 +13,7 @@ public class LayoutSizePropertyBindHandler implements PropertyBindHandler {
     private static final String LAYOUT_WRAP_CONTENT = "wrap_content";
 
     @Override
-    public void parse(View v, Property pro) throws Exception {
+    public void bind(View v, Property pro, ViewGroup parent) throws Exception {
         String property = pro.property;
         String value = pro.value;
         ViewGroup.LayoutParams p = v.getLayoutParams();

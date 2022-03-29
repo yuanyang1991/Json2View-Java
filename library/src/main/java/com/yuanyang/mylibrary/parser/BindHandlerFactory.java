@@ -80,6 +80,11 @@ public class BindHandlerFactory {
             case PropertyItem.TEXT_STYLE:
             case PropertyItem.TEXT:
             case PropertyItem.FONT_FAMILY:
+            case PropertyItem.DRAWABLE_BOTTOM:
+            case PropertyItem.DRAWABLE_TOP:
+            case PropertyItem.DRAWABLE_START:
+            case PropertyItem.DRAWABLE_END:
+            case PropertyItem.DRAWABLE_PADDING:
                 return KEY_TEXTVIEW;
             case PropertyItem.SRC:
             case PropertyItem.SCALE_TYPE:

@@ -41,7 +41,7 @@ public class RelativeLayoutPropertyBindHandler implements PropertyBindHandler {
     }
 
     @Override
-    public void parse(View v, Property p) throws Exception {
+    public void bind(View v, Property p, ViewGroup parent) throws Exception {
         Integer rule = map.get(p.property);
         if (rule != null) {
             ViewGroup.LayoutParams params = v.getLayoutParams();

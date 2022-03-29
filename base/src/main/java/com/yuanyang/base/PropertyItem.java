@@ -58,6 +58,11 @@ public interface PropertyItem {
     String LINES = "lines";
     String SINGLE_LINE = "singleLine";
     String GRAVITY = "gravity";
+    String DRAWABLE_START = "drawableStart";
+    String DRAWABLE_END = "drawableEnd";
+    String DRAWABLE_TOP = "drawableTop";
+    String DRAWABLE_BOTTOM = "drawableBottom";
+    String DRAWABLE_PADDING = "drawablePadding";
 
     // imageview
     String SRC = "src";

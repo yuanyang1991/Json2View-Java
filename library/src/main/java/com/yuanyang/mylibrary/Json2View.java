@@ -23,21 +23,21 @@ public class Json2View {
     public View parse() throws Exception {
         String json = new StringReader(f).readString();
         JSONObject jsonObject = new JSONObject(json);
-        return parseInner(jsonObject);
+        return parseInner(jsonObject, null);
     }
 
-    private View parseInner(JSONObject jsonObject) throws Exception {
+    private View parseInner(JSONObject jsonObject, ViewGroup parent) throws Exception {
         String widgetStr = jsonObject.optString(Constants.WIDGET_NAME);
         View view = ViewFactory.getView(getAttachedActivity(), widgetStr);
         JSONArray properties = jsonObject.optJSONArray(Constants.PROPERTIES_NAME);
-        PropertiesHelper.applyProperties(view, properties);
+        PropertiesHelper.applyProperties(view, properties, parent);
         JSONArray children = jsonObject.optJSONArray(Constants.CHILDREN_NAME);
         if (children != null) {
-            ViewGroup parent = (ViewGroup) view;
+            ViewGroup viewGroup = (ViewGroup) view;
             int childLength = children.length();
             for (int i = 0; i < childLength; i++) {
-                View child = parseInner(children.optJSONObject(i));
-                parent.addView(child);
+                View child = parseInner(children.optJSONObject(i), viewGroup);
+                viewGroup.addView(child);
             }
         }
         return view;

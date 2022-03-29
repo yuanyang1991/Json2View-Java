@@ -9,7 +9,7 @@ import com.yuanyang.mylibrary.Utils;
 
 public class LayoutWeightPropertyBindHandler implements PropertyBindHandler {
     @Override
-    public void parse(View v, Property pro) throws Exception {
+    public void bind(View v, Property pro, ViewGroup parent) throws Exception {
         String value = pro.value;
         ViewGroup.LayoutParams p = v.getLayoutParams();
         if (p instanceof LinearLayout.LayoutParams) {

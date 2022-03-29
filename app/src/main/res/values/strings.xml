@@ -3,6 +3,22 @@
     <string name="vas_welcome_to_try_premium">欢迎体验试用会员</string>
     <string name="premium_sign_in_unlock_privilege">登录并解锁20多项仅在WPS Premium中可用的独家福利</string>
     <string name="pdf_paypage_btn_freetrial_txt">开始免费试用</string>
-    <string name="pdf_paypage_btn_upgrade_txt">升级为会员111</string>
-    <string name="pdf_paypage_btn_upgrade_txt1">升级为会员2222</string>
+    <string name="pdf_paypage_btn_upgrade_txt">升级为会员</string>
+    <string name="public_vip_guide_unlock">解锁高级功能</string>
+    <string name="public_vip_guide_edit_fill_sign">编辑PDF、填表和签名</string>
+    <string name="public_vip_guide_pdf_convert">PDF转成Word、Excel、PPT</string>
+    <string name="public_vip_guide_scan_to_pdf">扫描件、图片转成PDF</string>
+    <string name="public_vip_guide_combine_split">合并、拆分任意文档</string>
+    <string name="public_vip_guide_pdf_share">无限制以图片、PDF分享</string>
+    <string name="public_vip_guide_annotate">标注并导出高亮文本</string>
+    <string name="public_vip_guide_compress">压缩、加密、防伪处理</string>
+    <string name="public_vip_guide_more_privileges">更多特权，提升30%办公效率</string>
+    <string name="public_vip_guide_original_price">原价<![CDATA[<font color="#EA5035">%s</font>]]>/年，享专属折扣</string>
+    <string name="public_vip_guide_upgrade_premium">%s升级会员</string>
+    <string name="public_vip_guide_start_trial">开始3天试用</string>
+    <string name="public_vip_guide_trial_cancel">3天免费试用，随后%s/年自动扣费，可随时取消</string>
+    <string name="en_pay_privacy_policy">隐私政策</string>
+    <string name="en_pay_terms_of_use">使用条款</string>
+    <string name="public_continue">继续</string>
+    <string name="public_continueText">是否继续？</string>
 </resources>

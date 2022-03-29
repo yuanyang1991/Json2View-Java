@@ -49,6 +49,7 @@ public class Helper {
             case PropertyItem.MARGIN:
             case PropertyItem.MIN_WIDTH:
             case PropertyItem.MIN_HEIGHT:
+            case PropertyItem.DRAWABLE_PADDING:
                 type = PropertyType.TYPE_DIMEN;
                 break;
             case PropertyItem.LAYOUT_CENTER_HORIZONTAL:
@@ -87,6 +88,13 @@ public class Helper {
                 break;
             case PropertyItem.VISIBILITY:
                 type = PropertyType.TYPE_STRING;
+                break;
+            case PropertyItem.DRAWABLE_START:
+            case PropertyItem.DRAWABLE_END:
+            case PropertyItem.DRAWABLE_TOP:
+            case PropertyItem.DRAWABLE_BOTTOM:
+                type = PropertyType.TYPE_DRAWABLE_REF;
+                value = getRefValue(propertyValue);
                 break;
         }
         return new Property(propertyName, type, value);

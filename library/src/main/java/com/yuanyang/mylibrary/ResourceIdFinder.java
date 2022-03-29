@@ -2,7 +2,7 @@ package com.yuanyang.mylibrary;
 
 import android.content.Context;
 
-public class ResourceLoader {
+public class ResourceIdFinder {
 
     private static final String RES_TYPE_STRING = "string";
     private static final String RES_TYPE_DRAWABLE = "drawable";

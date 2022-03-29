@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/secondBackgroundColor"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:focusableInTouchMode="true">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/func_guide_pay_page_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/new_user_head_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/new_user_head_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/new_user_guide_premium_head" />
+
+                    <ImageView
+                        android:id="@+id/new_user_page_close"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="32dp"
+                        android:layout_marginEnd="22dp"
+                        android:layout_marginRight="22dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/new_user_guide_premium_close_bg" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/en_new_user_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="21dp"
+                    android:layout_marginLeft="21dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="21dp"
+                    android:layout_marginRight="21dp"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:text="@string/vas_welcome_to_try_premium"
+                    android:textColor="@color/mainTextColor"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/en_new_user_sub_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="21dp"
+                    android:layout_marginLeft="21dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="21dp"
+                    android:layout_marginRight="21dp"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:text="@string/premium_sign_in_unlock_privilege"
+                    android:textColor="@color/descriptionColor"
+                    android:textSize="14sp" />
+
+                <!--                <cn.wps.moffice.pay.loginguide.NewUserGuideVasBanner-->
+                <!--                    android:id="@+id/en_new_user_privilege_banner"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="match_parent"-->
+                <!--                    android:layout_marginStart="11dp"-->
+                <!--                    android:layout_marginLeft="11dp"-->
+                <!--                    android:layout_marginTop="22dp"-->
+                <!--                    android:layout_marginEnd="11dp"-->
+                <!--                    android:layout_marginRight="11dp" />-->
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/new_user_pay_button_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/dlg_opt_pay_btn"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/en_new_user_pay_button_selector"
+            android:gravity="center"
+            android:paddingStart="19dp"
+            android:paddingTop="3dp"
+            android:paddingEnd="19dp"
+            android:paddingBottom="3dp"
+            android:text="@string/pdf_paypage_btn_upgrade_txt"
+            android:textColor="@color/whiteMainTextColor"
+            android:textSize="16sp"
+            app:autoSizeMaxTextSize="16sp"
+            app:autoSizeMinTextSize="12sp"
+            app:autoSizeTextType="uniform" />
+
+        <TextView
+            android:id="@+id/pay_bottom_trial_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="21dp"
+            android:layout_marginLeft="21dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="21dp"
+            android:layout_marginRight="21dp"
+            android:layout_marginBottom="16dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:maxLines="2"
+            android:textColor="@color/descriptionColor"
+            android:textSize="14sp"
+            app:autoSizeMaxTextSize="14sp"
+            app:autoSizeMinTextSize="10sp"
+            app:autoSizeTextType="uniform" />
+    </LinearLayout>
+</LinearLayout>

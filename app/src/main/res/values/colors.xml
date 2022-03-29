@@ -12,4 +12,8 @@
     <color name="subTextColor">#B3000000</color>
     <color name="descriptionColor">#66000000</color>
     <color name="whiteMainTextColor">#FFFFFFFF</color>
+    <color name="WPSMainColor">#FF4991F2</color>
+    <color name="lineColor">#1A000000</color>
+    <color name="buttonMainColor">#FFFF4E37</color>
+    <color name="buttonMainPressedColor">#66FF4E37</color>
 </resources>

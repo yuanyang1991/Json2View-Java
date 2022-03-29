@@ -8,7 +8,9 @@ public class ViewFactory {
     private static final String ANDROID_WIDGET_PREFIX = "android.widget.";
 
     public static View getView(Context context, String widgetStr) throws Exception {
-        if (!widgetStr.contains(".")) {
+        if ("View".equals(widgetStr)) {
+            widgetStr = "android.view.View";
+        } else if (!widgetStr.contains(".")) {
             widgetStr = ANDROID_WIDGET_PREFIX + widgetStr;
         }
         Class clz = Class.forName(widgetStr);

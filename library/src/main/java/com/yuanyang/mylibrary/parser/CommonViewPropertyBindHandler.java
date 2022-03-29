@@ -5,9 +5,8 @@ import android.view.ViewGroup;
 
 import com.yuanyang.base.PropertyItem;
 import com.yuanyang.base.PropertyType;
-import com.yuanyang.mylibrary.Constants;
 import com.yuanyang.mylibrary.Property;
-import com.yuanyang.mylibrary.ResourceLoader;
+import com.yuanyang.mylibrary.ResourceIdFinder;
 import com.yuanyang.mylibrary.Utils;
 import com.yuanyang.mylibrary.parser.internal.IdMapper;
 
@@ -15,7 +14,7 @@ public class CommonViewPropertyBindHandler implements PropertyBindHandler {
 
 
     @Override
-    public void parse(View v, Property p) throws Exception {
+    public void bind(View v, Property p, ViewGroup parent) throws Exception {
         String property = p.property;
         String value = p.value;
         String type = p.type;
@@ -93,10 +92,10 @@ public class CommonViewPropertyBindHandler implements PropertyBindHandler {
                 v.setBackgroundColor(Utils.string2Color(value));
                 break;
             case PropertyType.TYPE_DRAWABLE_REF:
-                v.setBackgroundResource(ResourceLoader.getDrawableId(v.getContext(), value));
+                v.setBackgroundResource(ResourceIdFinder.getDrawableId(v.getContext(), value));
                 break;
             case PropertyType.TYPE_COLOR_REF:
-                v.setBackgroundResource(ResourceLoader.getColorId(v.getContext(), value));
+                v.setBackgroundResource(ResourceIdFinder.getColorId(v.getContext(), value));
                 break;
         }
     }

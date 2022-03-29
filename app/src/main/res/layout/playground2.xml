@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="26dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/func_head_img_relative_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#4CAEFF"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="88dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/en_single_sku_head_icon" />
+
+                <TextView
+                    android:id="@+id/en_single_sku_head_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginEnd="35dp"
+                    android:layout_marginBottom="30dp"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:lineSpacingExtra="5dp"
+                    android:text="@string/public_vip_guide_unlock"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="42dp"
+                android:layout_marginLeft="42dp"
+                android:layout_marginTop="31dp"
+                android:layout_marginEnd="48dp"
+                android:layout_marginRight="48dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/en_single_sku_privileges_icon"
+                    android:drawableLeft="@drawable/en_single_sku_privileges_icon"
+                    android:drawablePadding="12dp"
+                    android:ellipsize="end"
+                    android:includeFontPadding="false"
+                    android:maxLines="2"
+                    android:text="@string/public_vip_guide_edit_fill_sign"
+                    android:textColor="@color/subTextColor"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="27dp"
+                    android:drawableStart="@drawable/en_single_sku_privileges_icon"
+                    android:drawableLeft="@drawable/en_single_sku_privileges_icon"
+                    android:drawablePadding="12dp"
+                    android:ellipsize="end"
+                    android:includeFontPadding="false"
+                    android:maxLines="2"
+                    android:text="@string/public_vip_guide_pdf_convert"
+                    android:textColor="@color/subTextColor"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="27dp"
+                    android:drawableStart="@drawable/en_single_sku_privileges_icon"
+                    android:drawableLeft="@drawable/en_single_sku_privileges_icon"
+                    android:drawablePadding="12dp"
+                    android:ellipsize="end"
+                    android:includeFontPadding="false"
+                    android:maxLines="2"
+                    android:text="@string/public_vip_guide_combine_split"
+                    android:textColor="@color/subTextColor"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="27dp"
+                    android:drawableStart="@drawable/en_single_sku_privileges_icon"
+                    android:drawableLeft="@drawable/en_single_sku_privileges_icon"
+                    android:drawablePadding="12dp"
+                    android:includeFontPadding="false"
+                    android:text="@string/public_vip_guide_pdf_share"
+                    android:textColor="@color/subTextColor"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="27dp"
+                    android:drawableStart="@drawable/en_single_sku_privileges_icon"
+                    android:drawableLeft="@drawable/en_single_sku_privileges_icon"
+                    android:drawablePadding="12dp"
+                    android:ellipsize="end"
+                    android:includeFontPadding="false"
+                    android:maxLines="2"
+                    android:text="@string/public_vip_guide_annotate"
+                    android:textColor="@color/subTextColor"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="27dp"
+                    android:drawableStart="@drawable/en_single_sku_privileges_icon"
+                    android:drawableLeft="@drawable/en_single_sku_privileges_icon"
+                    android:drawablePadding="12dp"
+                    android:ellipsize="end"
+                    android:includeFontPadding="false"
+                    android:maxLines="2"
+                    android:text="@string/public_vip_guide_compress"
+                    android:textColor="@color/subTextColor"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/en_single_sku_privileges_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="27dp"
+                    android:drawableStart="@drawable/en_single_sku_privileges_icon"
+                    android:drawableLeft="@drawable/en_single_sku_privileges_icon"
+                    android:drawablePadding="12dp"
+                    android:ellipsize="end"
+                    android:includeFontPadding="false"
+                    android:maxLines="2"
+                    android:text="@string/public_vip_guide_more_privileges"
+                    android:textColor="@color/subTextColor"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/en_single_sku_privileges_more_test"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="27dp"
+                    android:drawableStart="@drawable/en_single_sku_privileges_icon"
+                    android:drawableLeft="@drawable/en_single_sku_privileges_icon"
+                    android:drawablePadding="12dp"
+                    android:ellipsize="end"
+                    android:includeFontPadding="false"
+                    android:maxLines="2"
+                    android:text="for test"
+                    android:textColor="@color/subTextColor"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/en_single_sku_policy_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.33dp"
+                    android:layout_marginTop="28dp"
+                    android:background="@color/lineColor" />
+
+                <!--                <cn.wps.moffice.pay.view.PDFPayPageListView-->
+                <!--                    android:id="@+id/func_guide_pdf_payments_list"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginStart="21dp"-->
+                <!--                    android:layout_marginTop="8dp"-->
+                <!--                    android:layout_marginEnd="21dp"-->
+                <!--                    android:divider="#ffffff"-->
+                <!--                    android:dividerHeight="0dp"-->
+                <!--                    android:scrollbars="none" />-->
+
+                <TextView
+                    android:id="@+id/en_single_privacy_policy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="21dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="21dp"
+                    android:ellipsize="end"
+                    android:includeFontPadding="false"
+                    android:lineSpacingExtra="5dp"
+                    android:textColor="@color/descriptionColor"
+                    android:textSize="11sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="42dp"
+                    android:layout_marginLeft="42dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="48dp"
+                    android:layout_marginRight="48dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/en_single_terms_of_use_link"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="9dp"
+                        android:layout_marginRight="9dp"
+                        android:ellipsize="end"
+                        android:includeFontPadding="false"
+                        android:text="@string/en_pay_terms_of_use"
+                        android:textColor="@color/WPSMainColor"
+                        android:textSize="11sp" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="9dp"
+                        android:background="@color/lineColor" />
+
+                    <TextView
+                        android:id="@+id/en_single_privacy_policy_link"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="9dp"
+                        android:layout_marginLeft="9dp"
+                        android:ellipsize="end"
+                        android:includeFontPadding="false"
+                        android:text="@string/en_pay_privacy_policy"
+                        android:textColor="@color/WPSMainColor"
+                        android:textSize="11sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/pay_button_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.33dp"
+            android:background="@color/lineColor" />
+
+        <TextView
+            android:id="@+id/en_single_sku_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginEnd="20dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:textColor="@color/subTextColor"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/en_single_sku_month_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="20dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:textColor="@color/descriptionColor"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/dlg_opt_pay_btn"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="21dp"
+            android:layout_marginBottom="18dp"
+            android:background="@drawable/func_pay_btn_orange_selector"
+            android:text="@string/public_continue"
+            android:textColor="@color/whiteMainTextColor"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>
