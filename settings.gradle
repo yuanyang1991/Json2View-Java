@@ -2,3 +2,4 @@ rootProject.name = "Json2View-Java"
 include ':app'
 include ':library'
 include ':xml2json'
+include ':base'

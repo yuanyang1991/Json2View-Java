@@ -2,11 +2,6 @@ plugins {
     id 'java-library'
 }
 
-dependencies {
-    implementation group: 'com.google.code.gson', name: 'gson', version: '2.9.0'
-    implementation(project(':base'))
-}
-
 java {
     sourceCompatibility = JavaVersion.VERSION_1_7
     targetCompatibility = JavaVersion.VERSION_1_7

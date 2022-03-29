@@ -55,7 +55,7 @@ public class LayoutXmlParser extends DefaultHandler {
         for (int i = 0; i < len; i++) {
             key = attributes.getLocalName(i);
             value = attributes.getValue(i);
-            result.add(PropertyHelper.createPropertyItem(key, value));
+            result.add(Helper.createPropertyItem(key, value));
         }
         return result;
     }

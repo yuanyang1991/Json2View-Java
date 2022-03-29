@@ -3,6 +3,8 @@ package com.yuanyang.mylibrary.parser;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.yuanyang.base.PropertyItem;
+import com.yuanyang.base.PropertyType;
 import com.yuanyang.mylibrary.Constants;
 import com.yuanyang.mylibrary.Property;
 import com.yuanyang.mylibrary.ResourceLoader;
@@ -17,9 +19,9 @@ public class CommonViewPropertyBindHandler implements PropertyBindHandler {
         String property = p.property;
         String value = p.value;
         String type = p.type;
-        if (property.equals(BACKGROUND)) {
+        if (property.equals(PropertyItem.BACKGROUND)) {
             applyBackground(v, property, value, type);
-        } else if (property.equals(ID)) {
+        } else if (property.equals(PropertyItem.ID)) {
             int id = IdMapper.getInstance().nextId();
             v.setId(id);
             IdMapper.getInstance().put(value, id);
@@ -27,6 +29,8 @@ public class CommonViewPropertyBindHandler implements PropertyBindHandler {
             applyMargin(v, property, value, type);
         } else if (property.startsWith(BindHandlerFactory.KEY_PADDING)) {
             applyPadding(v, property, value, type);
+        } else if (property.equals(PropertyItem.VISIBILITY)) {
+            v.setVisibility(VisibilityUtils.stringToVisibility(value));
         }
     }
 
@@ -36,15 +40,15 @@ public class CommonViewPropertyBindHandler implements PropertyBindHandler {
         int paddingEnd = v.getPaddingEnd();
         int paddingTop = v.getPaddingTop();
         int paddingBottom = v.getPaddingBottom();
-        if (PropertyBindHandler.PADDING.equals(property)) {
+        if (PropertyItem.PADDING.equals(property)) {
             paddingStart = paddingEnd = paddingTop = paddingBottom = padding;
-        } else if (PropertyBindHandler.PADDING_START.equals(property)) {
+        } else if (PropertyItem.PADDING_START.equals(property)) {
             paddingStart = padding;
-        } else if (PropertyBindHandler.PADDING_END.equals(property)) {
+        } else if (PropertyItem.PADDING_END.equals(property)) {
             paddingEnd = padding;
-        } else if (PropertyBindHandler.PADDING_TOP.equals(property)) {
+        } else if (PropertyItem.PADDING_TOP.equals(property)) {
             paddingTop = padding;
-        } else if (PropertyBindHandler.PADDING_BOTTOM.equals(property)) {
+        } else if (PropertyItem.PADDING_BOTTOM.equals(property)) {
             paddingBottom = padding;
         }
         v.setPadding(paddingStart, paddingTop, paddingEnd, paddingBottom);
@@ -60,15 +64,15 @@ public class CommonViewPropertyBindHandler implements PropertyBindHandler {
             int marginTop = marginLayoutParams.topMargin;
             int marginBottom = marginLayoutParams.bottomMargin;
 
-            if (property.equals(PropertyBindHandler.MARGIN)) {
+            if (property.equals(PropertyItem.MARGIN)) {
                 marginStart = marginEnd = marginTop = marginBottom = margin;
-            } else if (property.equals(PropertyBindHandler.MARGIN_START)) {
+            } else if (property.equals(PropertyItem.MARGIN_START)) {
                 marginStart = margin;
-            } else if (property.equals(PropertyBindHandler.MARGIN_END)) {
+            } else if (property.equals(PropertyItem.MARGIN_END)) {
                 marginEnd = margin;
-            } else if (property.equals(PropertyBindHandler.MARGIN_TOP)) {
+            } else if (property.equals(PropertyItem.MARGIN_TOP)) {
                 marginTop = margin;
-            } else if (property.equals(PropertyBindHandler.MARGIN_BOTTOM)) {
+            } else if (property.equals(PropertyItem.MARGIN_BOTTOM)) {
                 marginBottom = margin;
             }
 
@@ -85,14 +89,14 @@ public class CommonViewPropertyBindHandler implements PropertyBindHandler {
 
     private void applyBackground(View v, String property, String value, String type) {
         switch (type) {
-            case Constants.TYPE_COLOR:
+            case PropertyType.TYPE_COLOR:
                 v.setBackgroundColor(Utils.string2Color(value));
                 break;
-            case Constants.TYPE_REF:
+            case PropertyType.TYPE_DRAWABLE_REF:
                 v.setBackgroundResource(ResourceLoader.getDrawableId(v.getContext(), value));
                 break;
-            case Constants.TYPE_DRAWABLE:
-
+            case PropertyType.TYPE_COLOR_REF:
+                v.setBackgroundResource(ResourceLoader.getColorId(v.getContext(), value));
                 break;
         }
     }

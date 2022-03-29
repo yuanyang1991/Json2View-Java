@@ -3,7 +3,8 @@ package com.yuanyang.mylibrary.parser;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.yuanyang.mylibrary.Constants;
+import com.yuanyang.base.PropertyItem;
+import com.yuanyang.base.PropertyType;
 import com.yuanyang.mylibrary.Property;
 import com.yuanyang.mylibrary.ResourceLoader;
 
@@ -16,12 +17,12 @@ public class ImageViewPropertyBindHandler implements PropertyBindHandler {
         String type = p.type;
         if (v instanceof ImageView) {
             ImageView imageView = (ImageView) v;
-            if (property.equals(PropertyBindHandler.SRC)) {
-                if (type.equals(Constants.TYPE_REF)) {
+            if (property.equals(PropertyItem.SRC)) {
+                if (type.equals(PropertyType.TYPE_DRAWABLE_REF)) {
                     imageView.setImageResource(ResourceLoader.getDrawableId(imageView.getContext(), value));
                 }
-            } else if (property.equals(PropertyBindHandler.SCALE_TYPE)) {
-                if (type.equals(Constants.TYPE_STRING)) {
+            } else if (property.equals(PropertyItem.SCALE_TYPE)) {
+                if (type.equals(PropertyType.TYPE_STRING)) {
                     imageView.setScaleType(ImageView.ScaleType.valueOf(value));
                 }
             }

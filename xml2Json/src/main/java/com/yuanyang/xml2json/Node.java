@@ -10,7 +10,7 @@ public class Node {
     private List<Node> children;
 
     public Node(String widget, List<Property> properties) {
-        this.widget = widget;
+        this.widget = widget; 
         this.properties = properties;
     }
 
