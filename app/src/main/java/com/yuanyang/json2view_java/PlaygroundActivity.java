@@ -4,10 +4,13 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.os.Environment;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
 import com.yuanyang.mylibrary.Json2View;
+import com.yuanyang.mylibrary.click.Click;
+import com.yuanyang.mylibrary.click.ClickHandler;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -25,14 +28,23 @@ public class PlaygroundActivity extends Activity {
         View rootView = null;
         try {
             File jsonFile = copyFile(true);
-            rootView = new Json2View(this, jsonFile).parse();
+            if (jsonFile == null) {
+                Toast.makeText(PlaygroundActivity.this, "json file not found", Toast.LENGTH_SHORT).show();
+                finish();
+            } else {
+                ClickHandler.getInstance().registerClick("showToast", new Click() {
+                    @Override
+                    public void onClick(View view, String data) {
+                        Toast.makeText(PlaygroundActivity.this, "showToast", Toast.LENGTH_SHORT).show();
+                    }
+                });
+                rootView = new Json2View(this, jsonFile).parse();
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
         if (rootView != null) {
             setContentView(rootView);
-        } else {
-            throw new IllegalStateException("inflate view error");
         }
     }
 

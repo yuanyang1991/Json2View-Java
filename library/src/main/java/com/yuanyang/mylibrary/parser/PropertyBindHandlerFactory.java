@@ -4,7 +4,7 @@ import com.yuanyang.base.PropertyItem;
 
 import java.util.HashMap;
 
-public class BindHandlerFactory {
+public class PropertyBindHandlerFactory {
 
     public static final String KEY_PADDING = "padding";
     public static final String KEY_MARGIN = "layout_margin";
@@ -102,6 +102,7 @@ public class BindHandlerFactory {
             case PropertyItem.MARGIN_TOP:
             case PropertyItem.MARGIN_BOTTOM:
             case PropertyItem.VISIBILITY:
+            case PropertyItem.ONCLICK:
                 return KEY_COMMON;
             case PropertyItem.GRAVITY:
                 return KEY_GRAVITY;

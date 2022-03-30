@@ -6,7 +6,7 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
-import com.yuanyang.mylibrary.parser.BindHandlerFactory;
+import com.yuanyang.mylibrary.parser.PropertyBindHandlerFactory;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -25,7 +25,7 @@ public class PropertiesHelper {
             String property = jsonObject.optString(Constants.PROPERTY_NAME);
             String value = jsonObject.optString(Constants.PROPERTY_VALUE);
             String type = jsonObject.optString(Constants.PROPERTY_TYPE);
-            BindHandlerFactory.getPropertyParser(property).bind(view, new Property(property, type, value), parent);
+            PropertyBindHandlerFactory.getPropertyParser(property).bind(view, new Property(property, type, value), parent);
         }
     }
 

@@ -5,13 +5,14 @@ import android.view.ViewGroup;
 
 import com.yuanyang.base.PropertyItem;
 import com.yuanyang.base.PropertyType;
+import com.yuanyang.mylibrary.GlobalOnClickListener;
 import com.yuanyang.mylibrary.Property;
+import com.yuanyang.mylibrary.R;
 import com.yuanyang.mylibrary.ResourceIdFinder;
 import com.yuanyang.mylibrary.Utils;
 import com.yuanyang.mylibrary.parser.internal.IdMapper;
 
 public class CommonViewPropertyBindHandler implements PropertyBindHandler {
-
 
     @Override
     public void bind(View v, Property p, ViewGroup parent) throws Exception {
@@ -24,12 +25,15 @@ public class CommonViewPropertyBindHandler implements PropertyBindHandler {
             int id = IdMapper.getInstance().nextId();
             v.setId(id);
             IdMapper.getInstance().put(value, id);
-        } else if (property.startsWith(BindHandlerFactory.KEY_MARGIN)) {
+        } else if (property.startsWith(PropertyBindHandlerFactory.KEY_MARGIN)) {
             applyMargin(v, property, value, type);
-        } else if (property.startsWith(BindHandlerFactory.KEY_PADDING)) {
+        } else if (property.startsWith(PropertyBindHandlerFactory.KEY_PADDING)) {
             applyPadding(v, property, value, type);
         } else if (property.equals(PropertyItem.VISIBILITY)) {
             v.setVisibility(VisibilityUtils.stringToVisibility(value));
+        } else if (property.equals(PropertyItem.ONCLICK)) {
+            v.setTag(R.id.tag_key_onclick, value);
+            v.setOnClickListener(GlobalOnClickListener.INSTANCE);
         }
     }
 

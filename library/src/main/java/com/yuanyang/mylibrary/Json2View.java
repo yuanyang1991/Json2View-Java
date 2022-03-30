@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.yuanyang.mylibrary.click.ClickHandler;
+
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -14,10 +16,15 @@ public class Json2View {
 
     private final WeakReference<Activity> mAtyRef;
     private final File f;
+    private ClickHandler clickHandler;
 
     public Json2View(Activity aty, File f) {
         this.mAtyRef = new WeakReference<>(aty);
         this.f = f;
+    }
+
+    public void bindClickHandler(ClickHandler clickHandler) {
+        this.clickHandler = clickHandler;
     }
 
     public View parse() throws Exception {

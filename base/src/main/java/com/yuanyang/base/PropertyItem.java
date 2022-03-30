@@ -9,6 +9,7 @@ public interface PropertyItem {
     String VISIBILITY = "visibility";
     String MIN_WIDTH = "minWidth";
     String MIN_HEIGHT = "minHeight";
+    String ONCLICK = "onClick";
 
     // padding
     String PADDING_START = "padding_start";
@@ -67,4 +68,6 @@ public interface PropertyItem {
     // imageview
     String SRC = "src";
     String SCALE_TYPE = "scaleType";
+
+    String action_data = "action_data";
 }
