@@ -43,8 +43,7 @@
                     android:text="@string/public_vip_guide_unlock"
                     android:textColor="@color/white"
                     android:textSize="16sp"
-                    android:textStyle="bold"
-                    />
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
@@ -152,7 +151,6 @@
                     android:text="@string/public_vip_guide_more_privileges"
                     android:textColor="@color/subTextColor"
                     android:textSize="14sp" />
-
 
             </LinearLayout>
 
@@ -288,9 +286,9 @@
             android:layout_marginEnd="21dp"
             android:layout_marginBottom="18dp"
             android:background="@drawable/func_pay_btn_orange_selector"
-            android:text="@string/public_continue"
             android:onClick="showToast"
             android:tag="continue"
+            android:text="@string/public_continue"
             android:textColor="@color/whiteMainTextColor"
             android:textSize="16sp" />
     </LinearLayout>

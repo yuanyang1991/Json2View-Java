@@ -14,6 +14,11 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
+
+        ndk {
+            abiFilters "armeabi-v7a"
+        }
+
     }
 
     buildTypes {
@@ -37,6 +42,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
     implementation(project(':base'))
-    //implementation 'com.eclipsesource.j2v8:j2v8:6.2.1@aar'
+    implementation 'com.eclipsesource.j2v8:j2v8:5.0.103@aar'
 
 }
