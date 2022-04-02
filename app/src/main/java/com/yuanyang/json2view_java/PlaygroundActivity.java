@@ -6,7 +6,6 @@ import android.os.Environment;
 import android.view.View;
 import android.widget.Toast;
 
-import androidx.annotation.Nullable;
 
 import com.yuanyang.mylibrary.Json2View;
 import com.yuanyang.mylibrary.click.Click;
@@ -23,7 +22,7 @@ import java.io.InputStream;
 public class PlaygroundActivity extends Activity {
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         View rootView = null;
         try {

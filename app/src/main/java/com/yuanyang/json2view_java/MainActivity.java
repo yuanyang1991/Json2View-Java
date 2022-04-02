@@ -1,23 +1,9 @@
 package com.yuanyang.json2view_java;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.TypedValue;
-import android.view.Gravity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
-
-import com.yuanyang.mylibrary.Json2View;
-
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -40,4 +26,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    public void toHummer(View view) {
+        startActivity(new Intent(this, HummerPlaygroundActivity.class));
+    }
 }

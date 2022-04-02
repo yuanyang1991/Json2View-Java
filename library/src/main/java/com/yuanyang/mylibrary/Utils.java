@@ -6,8 +6,6 @@ import android.graphics.Color;
 import android.util.TypedValue;
 import android.view.ViewGroup;
 
-import androidx.annotation.Nullable;
-
 public class Utils {
 
     public static int string2Int(String str) throws Exception {
@@ -25,7 +23,7 @@ public class Utils {
         return Color.parseColor(color);
     }
 
-    public static int dp2px(@Nullable final Context context, final float dpValue) {
+    public static int dp2px(final Context context, final float dpValue) {
         if (context == null) {
             return -1;
         }
