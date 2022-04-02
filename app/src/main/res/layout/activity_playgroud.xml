@@ -12,7 +12,7 @@
         android:layout_weight="1"
         android:focusableInTouchMode="true">
 
-        <androidx.core.widget.NestedScrollView
+        <ScrollView
             android:id="@+id/func_guide_pay_page_scroll"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -90,7 +90,7 @@
                 <!--                    android:layout_marginRight="11dp" />-->
 
             </LinearLayout>
-        </androidx.core.widget.NestedScrollView>
+        </ScrollView>
     </FrameLayout>
 
     <LinearLayout
